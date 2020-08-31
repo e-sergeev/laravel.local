@@ -21,8 +21,8 @@ Route::group([
 ], function () {
     Route::get('/', 'NewsController@index')->name('News');
     Route::get('/categories/{cat}/{id}', 'NewsController@show')->name('NewsOne');
-    Route::get('/categories', 'NewsController@showCategories')->name('Categories');
-    Route::get('/categories/{cat}', 'NewsController@showCategory')->name('Category');
+    Route::get('/categories', 'CategoriesController@index')->name('Categories');
+    Route::get('/categories/{cat}', 'CategoriesController@show')->name('Category');
 });
 
 Route::group([
@@ -35,8 +35,8 @@ Route::group([
 }
 );
 
+Route::view('/vue', 'vue')->name('vue');
 
+Auth::routes();
 
-
-
-
+Route::get('/home', 'HomeController@index')->name('home');
