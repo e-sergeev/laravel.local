@@ -6,15 +6,27 @@
 
 @section('content')
 
-  <h2>Новости</h2>
+  <h3>Новости</h3>
 
   @foreach ($news as $item)
-    <a href="{{ route('NewsOne', ['cat' => Str::slug($item['category']), 'id' => $item['id']]) }}">
-      {{ $item['title'] }}
-    </a>
-    <p>{{ $item['text'] }}</p>
+    <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-12">
+              <div class="card mb-2">
+                  <div class="card-header">
+                    <a href="{{ route('NewsOne', ['cat' => Str::slug($item['category']), 'id' => $item['id']]) }}">
+                      {{ $item['title'] }}
+                    </a>
+                  </div>
+
+                  <div class="card-body">
+                    {{ $item['text'] }}
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
   @endforeach
 
 @endsection
-
-@include('footer')

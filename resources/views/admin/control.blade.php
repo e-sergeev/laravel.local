@@ -2,15 +2,12 @@
 
 @section('title', 'Панель управления')
     
-@include('admin.menu')
+@include('menu')
 
 @section('content')
-  <div class="container mt-2 p-4">
-    <h2>Панель управления</h2>
-    <button class="btn btn-primary" type="submit">Добавить</button>
-    <button class="btn btn-primary" type="submit">Редактировать</button>
-    <button type="button" class="btn btn-danger">Удалить</button>
-  </div> 
+  <h3>Панель управления</h3>
+  <a href="{{ route('Admin.create')}} " class="btn btn-primary stretched-link">Добавить</a>
+  <a href="#" class="btn btn-primary stretched-link">Редактировать</a>
+  <a href="#" class="btn btn-danger stretched-link">Удалить</a>
 @endsection
 
-@include('footer')

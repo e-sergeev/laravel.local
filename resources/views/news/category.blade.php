@@ -10,15 +10,13 @@
 @section('content')
 <h3 class="text-capitalize">Категория: {{ $category['name']}}</h3>
   
-@foreach ($news as $item)
+  @foreach ($news as $item)
 
-<a href="{{ route('NewsOne', ['cat' => $slug, 'id' => $item['id']]) }}">
-    {{ $item['title'] }}
-  </a>
-  <p>{{ $item['text'] }}</p>
-    
-@endforeach
+    <a href="{{ route('NewsOne', ['cat' => $slug, 'id' => $item['id']]) }}">
+      {{ $item['title'] }}
+    </a>
+    <p>{{ $item['text'] }}</p>
+      
+  @endforeach
 
 @endsection
-
-@include('footer')
