@@ -32,6 +32,7 @@ Route::group([
 ], function () {
     Route::get('/', 'IndexController@index')->name('index');
     Route::get('/control', 'IndexController@control')->name('control');
+    Route::match(['get', 'post'], '/create', 'IndexController@create')->name('create');
 }
 );
 

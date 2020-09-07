@@ -2,12 +2,8 @@
 
 @section('title', 'Администратор')
 
-@include('admin.menu')
+@include('menu')
 
 @section('content')
-  <div class="container mt-2 p-4">
-    <h2>Администратор</h2>
-  </div>
+    <h3>Администратор</h3>
 @endsection
-
-@include('footer')
